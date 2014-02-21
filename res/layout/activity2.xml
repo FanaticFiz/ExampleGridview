@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myRel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgsecond"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Activity2" >
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center_horizontal"
+        android:text="Начнем с простого ))"
+        android:textColor="#FF888888"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="62dp"
+        android:gravity="center_horizontal"
+        android:text="Анаграммы"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#FFFF3333"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/textAnagramm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="89dp"
+        android:gravity="center_horizontal"
+        android:text="лепесток"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#FFEE2288"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textAnagramm"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:inputType="text"
+        android:maxLength="8" >
+
+        <requestFocus />
+    </EditText>
+
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText1"
+        android:layout_centerHorizontal="true"
+        android:background="@null"
+        android:src="@drawable/ic_launcher" />
+
+</RelativeLayout>

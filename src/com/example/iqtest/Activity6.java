@@ -11,7 +11,7 @@ public class Activity6 extends Activity
 	protected void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_activity6);
+		setContentView(R.layout.activity6);
 	}
 
 	@ Override
