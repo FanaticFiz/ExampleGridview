@@ -14,9 +14,10 @@ import android.widget.AdapterView.OnItemClickListener;
 @ SuppressLint("ShowToast")
 public class Activity5 extends Activity
 {
+	private	int					counter;
 	private GridView			mGrid;
 	private gridadapter_Game	mAdapter;
-	Toast toast;
+	Toast 						toast;
 	
 	@ Override
 	protected void onCreate(Bundle savedInstanceState)	{
@@ -36,10 +37,11 @@ public class Activity5 extends Activity
         {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) 
             	{
+            		counter++;
             		mAdapter.moov(position);
             		if (mAdapter.proverka()) {
 						// Win
-            			toast = Toast.makeText(getBaseContext(), "Да ты крут!!! ))", 3000);
+            			toast = Toast.makeText(getBaseContext(), "Да ты крут!!! Всегото "+counter+" Ходов.", 5000);
             			toast.show(); 
     	        		Intent intentG = new Intent();
     	        		intentG.setClass(Activity5.this, Activity6.class);
