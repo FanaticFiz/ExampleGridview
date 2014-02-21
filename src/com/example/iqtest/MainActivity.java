@@ -15,12 +15,12 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity
 {
-	private	Animation	animation_wrong_moovs;
-	public 	int			counter;
-	TextView 			mainText1,mainText2,mainText3,mainText4;
-	EditText 			myText,myText2;
-	ImageButton 		myMainB;
-	RelativeLayout 		rlMain;
+	private	Animation		animation_wrong_moovs;
+	private	int				counter;
+	private TextView		mainText1,mainText2,mainText3,mainText4;
+	private	EditText 		myText,myText2;
+	private	ImageButton 	myMainB;
+	private	RelativeLayout 	rlMain;
 	
 	@ Override
 	protected void onCreate(Bundle savedInstanceState)	{
@@ -36,7 +36,7 @@ public class MainActivity extends Activity
 		mainText4	= 	(TextView) 	findViewById(R.id.TextView4);
 		myText	 	= 	(EditText)	findViewById(R.id.editText1);
 		myText2 	= 	(EditText)	findViewById(R.id.editText2);		
-		myMainB 	= 	(ImageButton) findViewById(R.id.imageButton1);
+		myMainB 	= 	(ImageButton) findViewById(R.id.BombImBut1);
 		
 		rlMain = (RelativeLayout) findViewById(R.id.RLmain);
 		rlMain.setOnClickListener(new OnClickListener() {
@@ -61,7 +61,7 @@ public class MainActivity extends Activity
 			{
 				if (proverka())	{
 	        		Intent intentG = new Intent();
-	        		intentG.setClass(MainActivity.this, Activity5.class);
+	        		intentG.setClass(MainActivity.this, Activity2.class);
 	        		startActivity(intentG);
 				}else {
 					rlMain.startAnimation(animation_wrong_moovs);

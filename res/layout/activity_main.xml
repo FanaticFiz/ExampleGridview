@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/textView1"
         android:layout_below="@+id/textView1"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="70dp"
         android:gravity="right"
         android:maxWidth="230dp"
         android:text="Каждый раз перед тобой будет подсказка"
@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView2"
         android:layout_below="@+id/textView2"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="70dp"
         android:gravity="right"
         android:maxWidth="230dp"
         android:text="Твоя задача получив подсказку, заполнять некоторые поля"
@@ -69,7 +69,7 @@
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/TextView3"
         android:layout_below="@+id/TextView3"
-        android:layout_marginTop="78dp"
+        android:layout_marginTop="68dp"
         android:gravity="right"
         android:maxWidth="230dp"
         android:text="Например: представся"
@@ -88,14 +88,13 @@
         android:visibility="invisible" />
 
     <ImageButton
-        android:id="@+id/imageButton1"
+        android:id="@+id/BombImBut1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/editText2"
         android:layout_below="@+id/editText2"
-        android:background="@null"
+        android:background="@drawable/myb_states"
         android:scaleType="center"
-        android:src="@drawable/ic_launcher"
         android:visibility="invisible" />
 
 </RelativeLayout>

@@ -17,7 +17,7 @@ public class Activity5 extends Activity
 	private	int					counter;
 	private GridView			mGrid;
 	private gridadapter_Game	mAdapter;
-	Toast 						toast;
+	private	Toast				toast;
 	
 	@ Override
 	protected void onCreate(Bundle savedInstanceState)	{
@@ -52,13 +52,4 @@ public class Activity5 extends Activity
         		}                	             
         });  
 	}
-
-	@ Override
-	public boolean onCreateOptionsMenu(Menu menu)
-	{
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.second, menu);
-		return true;
-	}
-
 }

@@ -20,13 +20,13 @@ public class Activity2 extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.activity2);
 
 		animation = AnimationUtils.loadAnimation(this, R.anim.game_animation_wrongmoov);
 
 		final RelativeLayout myActivity = (RelativeLayout) findViewById(R.id.myRel);
 		final EditText myEdit = (EditText) findViewById(R.id.editText1);
-		ImageButton myBut = (ImageButton) findViewById(R.id.imageButton1);
+		ImageButton myBut = (ImageButton) findViewById(R.id.BombImBut1);
 		myBut.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {

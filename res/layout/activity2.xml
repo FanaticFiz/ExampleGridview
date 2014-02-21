@@ -58,18 +58,18 @@
         android:layout_marginTop="44dp"
         android:ems="10"
         android:inputType="text"
-        android:maxLength="8" >
+        android:maxLength="8"
+        android:text="телескоп" >
 
         <requestFocus />
     </EditText>
 
     <ImageButton
-        android:id="@+id/imageButton1"
+        android:id="@+id/BombImBut1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editText1"
         android:layout_centerHorizontal="true"
-        android:background="@null"
-        android:src="@drawable/ic_launcher" />
+        android:background="@drawable/myb_states" />
 
 </RelativeLayout>
