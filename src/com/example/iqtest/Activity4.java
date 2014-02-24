@@ -1,6 +1,5 @@
 package com.example.iqtest;
 
-import android.R.integer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -10,6 +9,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
@@ -18,7 +18,7 @@ public class Activity4 extends Activity
 {
 	private TextView	TimerField,primer;
 	private Animation	animation;
-	private	int 		a1,a2;
+	private	int 		a1,a2,a3;
 	private	ImageButton	iBut;
 	private	EditText	edit;
 	
@@ -34,7 +34,7 @@ public class Activity4 extends Activity
 		edit		= (EditText)	findViewById(R.id.editText1);
 		newPrimer();
 		
-		new CountDownTimer(100000, 1000) {
+		new CountDownTimer(60000, 1000) {
 			public void onTick(long millisUntilFinished) {
 				long sec = millisUntilFinished / 1000;
 				TimerField.setText(""+sec);
@@ -45,7 +45,7 @@ public class Activity4 extends Activity
 			}
 
 			public void onFinish() {
-				TimerField.setText("done!");
+				Toast.makeText(getApplicationContext(), "да ладно, пошутил я )))", Toast.LENGTH_LONG).show();
 			}
 		}.start();
 		
@@ -54,23 +54,27 @@ public class Activity4 extends Activity
 			@Override
 			public void onClick(View v) {
 				// проверяем то что ввели с решением примера
-				if (Integer.parseInt(edit.getText().toString()) == newPrimer())	{
-					Intent intentG = new Intent(); 
-					intentG.setClass(Activity4.this,Activity5.class); 
-					startActivity(intentG);					
+				if (edit.getText().length() != 0) {
+					if (Integer.parseInt(edit.getText().toString()) == a3)	{
+						Intent intentG = new Intent(); 
+						intentG.setClass(Activity4.this,Activity5.class); 
+						startActivity(intentG);					
+					}
 				}
 			}
 		});
 		
 	}
 	
-	// енерируем случайный пример
-	public int newPrimer() {
-		a1 = 6;
-		a2 = 12;
-		int a3 = a1+a2;
-		primer.setText(""+a1+ " + " +a2);
-		return a3;
+	// Генерируем случайный пример
+	public void newPrimer() {
+		a1 = getRand(38,86);
+		a2 = getRand(167,453);
+		a3 = a1*a2;
+		primer.setText(""+a1+ " * " +a2);
 	}
 	
+	public int getRand(int min, int max) {
+		  return (int) (Math.random() * (max - min) + min);
+		}
 }

@@ -17,7 +17,7 @@ public class MainActivity extends Activity
 {
 	private	Animation		animation_wrong_moovs;
 	private	int				counter;
-	private TextView		mainText1,mainText2,mainText3,mainText4;
+	private TextView		mainText2,mainText3,mainText4;
 	private	EditText 		myText,myText2;
 	private	ImageButton 	myMainB;
 	private	RelativeLayout 	rlMain;
@@ -30,7 +30,6 @@ public class MainActivity extends Activity
 		animation_wrong_moovs = AnimationUtils.loadAnimation(this, R.anim.game_animation_wrongmoov);
 		
 		counter = 0;
-		mainText1 	= 	(TextView) 	findViewById(R.id.textView1);
 		mainText2 	= 	(TextView) 	findViewById(R.id.textView2);
 		mainText3 	= 	(TextView) 	findViewById(R.id.TextView3);
 		mainText4	= 	(TextView) 	findViewById(R.id.TextView4);
@@ -61,7 +60,7 @@ public class MainActivity extends Activity
 			{
 				if (proverka())	{
 	        		Intent intentG = new Intent();
-	        		intentG.setClass(MainActivity.this, Activity2.class);
+	        		intentG.setClass(MainActivity.this, Activity8.class);
 	        		startActivity(intentG);
 				}else {
 					rlMain.startAnimation(animation_wrong_moovs);
