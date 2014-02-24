@@ -60,7 +60,7 @@ public class MainActivity extends Activity
 			{
 				if (proverka())	{
 	        		Intent intentG = new Intent();
-	        		intentG.setClass(MainActivity.this, Activity8.class);
+	        		intentG.setClass(MainActivity.this, Activity5.class);
 	        		startActivity(intentG);
 				}else {
 					rlMain.startAnimation(animation_wrong_moovs);

@@ -4,8 +4,9 @@ import android.os.Bundle;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
-import android.view.Menu;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.Toast;
@@ -18,7 +19,8 @@ public class Activity5 extends Activity
 	private GridView			mGrid;
 	private gridadapter_Game	mAdapter;
 	private	Toast				toast;
-	
+			Animation 			animationRC;
+			
 	@ Override
 	protected void onCreate(Bundle savedInstanceState)	{
 		super.onCreate(savedInstanceState);
@@ -30,13 +32,14 @@ public class Activity5 extends Activity
         mGrid.setEnabled(true);
         mAdapter = new gridadapter_Game(this);
         mGrid.setAdapter(mAdapter);
-        
+        animationRC = AnimationUtils.loadAnimation(this, R.anim.rotate_center);
         
         // Обработчик нажатий
         mGrid.setOnItemClickListener(new OnItemClickListener() 
         {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) 
             	{
+            		v.startAnimation(animationRC);
             		counter++;
             		mAdapter.moov(position);
             		if (mAdapter.proverka()) {
