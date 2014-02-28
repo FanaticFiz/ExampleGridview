@@ -26,7 +26,7 @@ public class MainActivity extends Activity
 	protected void onCreate(Bundle savedInstanceState)	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
+		
 		animation_wrong_moovs = AnimationUtils.loadAnimation(this, R.anim.game_animation_wrongmoov);
 		
 		counter = 0;
@@ -60,7 +60,7 @@ public class MainActivity extends Activity
 			{
 				if (proverka())	{
 	        		Intent intentG = new Intent();
-	        		intentG.setClass(MainActivity.this, Activity5.class);
+	        		intentG.setClass(MainActivity.this, Activity2.class);
 	        		startActivity(intentG);
 				}else {
 					rlMain.startAnimation(animation_wrong_moovs);

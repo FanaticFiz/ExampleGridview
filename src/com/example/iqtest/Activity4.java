@@ -21,6 +21,8 @@ public class Activity4 extends Activity
 	private	int 		a1,a2,a3;
 	private	ImageButton	iBut;
 	private	EditText	edit;
+	private Boolean		pr=false;
+	private	CountDownTimer myT;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +36,7 @@ public class Activity4 extends Activity
 		edit		= (EditText)	findViewById(R.id.editText1);
 		newPrimer();
 		
-		new CountDownTimer(60000, 1000) {
+		myT = new CountDownTimer(60000, 1000) {
 			public void onTick(long millisUntilFinished) {
 				long sec = millisUntilFinished / 1000;
 				TimerField.setText(""+sec);
@@ -45,7 +47,8 @@ public class Activity4 extends Activity
 			}
 
 			public void onFinish() {
-				Toast.makeText(getApplicationContext(), "да ладно, пошутил я )))", Toast.LENGTH_LONG).show();
+					Toast.makeText(getApplicationContext(), "да ладно, пошутил я )))", Toast.LENGTH_LONG).show();
+					pr = true;
 			}
 		}.start();
 		
@@ -55,11 +58,17 @@ public class Activity4 extends Activity
 			public void onClick(View v) {
 				// проверяем то что ввели с решением примера
 				if (edit.getText().length() != 0) {
-					if (Integer.parseInt(edit.getText().toString()) == a3)	{
+					if ( (Integer.parseInt(edit.getText().toString()) == a3) || (pr) )	{
 						Intent intentG = new Intent(); 
 						intentG.setClass(Activity4.this,Activity5.class); 
-						startActivity(intentG);					
+						startActivity(intentG);
+						myT.cancel();
 					}
+				}else if (pr) {
+					Intent intentG = new Intent(); 
+					intentG.setClass(Activity4.this,Activity5.class); 
+					startActivity(intentG);
+					myT.cancel();
 				}
 			}
 		});

@@ -5,7 +5,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.Toast;
 import android.app.Activity;
 import android.content.Intent;
 
@@ -28,7 +27,7 @@ public class Activity7 extends Activity {
 			{
 				if (myEdit.getText().toString().equals("Игорь0803")) 	{	
 					Intent intentG = new Intent(); 
-					intentG.setClass(Activity7.this,Activity2.class); 
+					intentG.setClass(Activity7.this,Activity8.class); 
 					startActivity(intentG);					
 				}
 			}

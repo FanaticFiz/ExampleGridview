@@ -9,13 +9,4 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".Activity8" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:gravity="center_horizontal"
-        android:text="Кто родился 8 марта ?"
-        android:textColor="#FF000000" />
-
 </RelativeLayout>

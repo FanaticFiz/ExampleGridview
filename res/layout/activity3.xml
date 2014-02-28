@@ -16,7 +16,7 @@
         android:layout_alignParentRight="true"
         android:gravity="center_horizontal"
         android:text="О боже! Что это?"
-        android:textColor="#FF3322EE"
+        android:textColor="#FFEE2288"
         android:textSize="20sp" />
 
     <EditText
