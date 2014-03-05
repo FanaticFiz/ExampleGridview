@@ -42,7 +42,7 @@ public class MainActivity extends Activity
 		
 		rlMain = (RelativeLayout) findViewById(R.id.RLmain);
 		
-		if ( (c.get(c.MONTH)+1==3) && (c.get(c.DAY_OF_MONTH)==8)) 
+		if ( (c.get(c.MONTH)+1==3) && (c.get(c.DAY_OF_MONTH)==5)) 
 		{
 		
 			rlMain.setOnClickListener(new OnClickListener() {
@@ -67,7 +67,7 @@ public class MainActivity extends Activity
 				{
 					if (proverka())	{
 						Intent intentG = new Intent();
-						intentG.setClass(MainActivity.this, Activity8.class);
+						intentG.setClass(MainActivity.this, Activity2.class);
 						startActivity(intentG);
 					}else {
 						rlMain.startAnimation(animation_wrong_moovs);

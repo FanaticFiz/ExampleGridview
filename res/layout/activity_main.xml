@@ -56,7 +56,6 @@
         android:hint="Имя"
         android:inputType="text"
         android:maxLength="5"
-        android:text="игорь"
         android:visibility="invisible" >
 
         <requestFocus />
