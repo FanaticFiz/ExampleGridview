@@ -26,8 +26,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:ems="10"
-        android:maxLength="14"
-        android:text="мультивибратор" >
+        android:maxLength="14" >
 
         <requestFocus />
     </EditText>
