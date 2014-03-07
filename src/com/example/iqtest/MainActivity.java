@@ -42,7 +42,7 @@ public class MainActivity extends Activity
 		
 		rlMain = (RelativeLayout) findViewById(R.id.RLmain);
 		
-		if ( (c.get(c.MONTH)+1==3) && (c.get(c.DAY_OF_MONTH)==5)) 
+		if ( (c.get(c.MONTH)+1==3) && (c.get(c.DAY_OF_MONTH)>=8)) 
 		{
 		
 			rlMain.setOnClickListener(new OnClickListener() {
