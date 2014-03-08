@@ -27,10 +27,10 @@ public class Activity6 extends Activity	{
 			@ Override
 			public void onClick(View v)
 			{
-				if (myEdit2.getText().toString().equals("21.03.1685")) {
+				if (myEdit2.getText().toString().equals("16.12.1770")) {
 					if (myEdit.getText().toString().equals("")) 	{	Toast.makeText(getApplicationContext(), "Ну а первое поле кто заполнять будет...", Toast.LENGTH_LONG).show();	}
-					if (myEdit.getText().toString().equals("бах")) 	{	Toast.makeText(getApplicationContext(), "Ну с большой буквы же надо...", Toast.LENGTH_LONG).show();				}
-					if (myEdit.getText().toString().equals("Бах")) 	{	
+					if (myEdit.getText().toString().equals("бетховен")) 	{	Toast.makeText(getApplicationContext(), "Ну с большой буквы же надо...", Toast.LENGTH_LONG).show();				}
+					if (myEdit.getText().toString().equals("Бетховен")) 	{	
 						Intent intentG = new Intent(); 
 						intentG.setClass(Activity6.this,Activity7.class); 
 						startActivity(intentG);					

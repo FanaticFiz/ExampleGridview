@@ -83,7 +83,7 @@ public class MainActivity extends Activity
 	{
 		String name = myText.getText().toString();
 		String data = myText2.getText().toString();
-		if ((name.equals("Игорь"))&&(data.equals("346871")))	{	return true;	} 
+		if ((name.equals("Игорь"))&&(data.equals("08.03.1984")))	{	return true;	} 
 		else 													{	return false;	}
 	}
 }

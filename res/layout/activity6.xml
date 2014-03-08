@@ -50,7 +50,7 @@
         android:layout_alignRight="@+id/textView1"
         android:ems="10"
         android:inputType="text"
-        android:maxLength="3" >
+        android:maxLength="8" >
 
         <requestFocus />
     </EditText>

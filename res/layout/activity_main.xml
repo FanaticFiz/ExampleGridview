@@ -81,6 +81,7 @@
         android:layout_alignLeft="@+id/editText1"
         android:layout_below="@+id/editText1"
         android:ems="10"
+        android:hint="дд.мм.гггг"
         android:inputType="date"
         android:maxLength="10"
         android:visibility="invisible" />
